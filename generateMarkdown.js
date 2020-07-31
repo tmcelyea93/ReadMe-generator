@@ -17,8 +17,7 @@ function generateMarkdown(answers) {
       ${answers.usage}
       ### Built With
       * [VScode](https://code.visualstudio.com/) - The editor of choice
-      * [Notepad++](https://notepad-plus-plus.org/) - My second editor
-      * [Gitbash](https://gitforwindows.org/) - What would we do without our bash?
+      * [Gitbash](https://gitforwindows.org/) 
       ### Questions
       ${answers.questions}
       
