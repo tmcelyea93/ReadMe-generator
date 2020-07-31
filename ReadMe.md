@@ -13,7 +13,7 @@ For this project the user must install node as well as the following:
 ## Usage
 To use this generator, the user must type "node index.js" into the command line and answer the responding questions. The video below shows in detail.
 
-<iframe src="https://drive.google.com/file/d/1mCiPOSC8nZL03aGc-L9xjP68WCIyRYk9/preview" width="640" height="480"></iframe>
+[![Demo Generator alpha](https://youtu.be/MA2QFKX0aKE)]
 
 ## Credits
 Along with myself and the npm installations I made, I also followed a bit of the tutorial from https://github.com/ianwalter/generates-readme#readme
