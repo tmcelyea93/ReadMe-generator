@@ -1,7 +1,7 @@
 const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
-const generateMarkdown = require(".utils/generateMarkdown.js")
+const generateMarkdown = require("./generateMarkdown.js")
 const apiCall = require("./api")
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -87,24 +87,23 @@ function promptUser(){
 } 
 
 // function to initialize program
-function init() {
+async function init() {
    
-        try {
-          const answers = await promptUser();
-          const results = await apiCall(answers.username);
-          answers.email = results.email;
-          answers.avatar_url = results.avatar_url;
-          const generateContent = generateReadme(answers);
-           
-          console.log(results);
-          await writeFileAsync("README.md", generateContent);
-      
-          console.log("Successfully wrote to README.md");
-        } catch(err) {
-          console.log(err);
-        }
-
-}
+    try {
+      const answers = await promptUser();
+      const results = await apiCall(answers.username);
+      answers.email = results.email;
+      answers.avatar_url = results.avatar_url;
+      const generateContent = generateMarkdown(answers);
+       
+      console.log(results);
+      await writeFileAsync("README.md", generateContent);
+  
+      console.log("Successfully wrote to README.md");
+    } catch(err) {
+      console.log(err);
+    }
+  }
 
 // function call to initialize program
 init();
